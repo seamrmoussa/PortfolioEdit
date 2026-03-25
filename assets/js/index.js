@@ -13,7 +13,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-for (;;) {}
+
 
 // function activeLink() {
 //   let sectionTop = aboutSection.offsetTop;
