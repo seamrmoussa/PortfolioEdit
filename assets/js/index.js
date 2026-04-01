@@ -194,9 +194,14 @@ function showAndHideToTopBtn() {
 
 ///////////////////////////////////////////////////
 // *To active tow function for active link and to top page BTN
-window.addEventListener("scrollend", () => {
-  updateActiveLink();
-  showAndHideToTopBtn();
+var scrollTimeout;
+window.addEventListener("scroll", () => {
+  clearTimeout(scrollTimeout);
+
+  scrollTimeout = setTimeout(function () {
+    updateActiveLink();
+    showAndHideToTopBtn();
+  }, 300);
 });
 
 ///////////////////////////////////////////////////
@@ -401,7 +406,6 @@ portfolioFilters.addEventListener("click", (e) => {
 
 ///////////////////////////////////////////////////
 // *For Carousel
-
 var currentIndex = 0;
 var totalItems = carouselIndicator.length;
 
